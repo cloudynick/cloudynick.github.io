@@ -1,0 +1,12 @@
+"Game" Ideas
+ - Game Finder (prob use OpenAI API)
+ - NBA Playoff Bracket Maker/Predictor
+
+
+Spotify Wrapped
+  - Since Spotfiy API can only provide data for the past 12 months, this app could instead read the data the user can request from Spotify,
+  and combine it with more recent data whenever the user wants to check. Instead of having to wait the 30 days to obtain their data again, 
+  this app can combine the data. If the user does this at least once a year, they can always have up to date 'all time' data for their
+  Spotify account. 
+    Ideas
+     - Can automatically claim data for the user every 12 months so users don't have to manually do it once a year 

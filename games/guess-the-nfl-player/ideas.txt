@@ -1,0 +1,2 @@
+Create a script that uses OpenAI API to adjust the player values
+Create a script to remove the IR and FRES from the player names
