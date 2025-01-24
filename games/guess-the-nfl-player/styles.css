@@ -1,0 +1,148 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+  }
+  
+  header {
+    text-align: center;
+    background: #333;
+    color: white;
+    padding: 10px 0;
+    height: 150px; /* Fixed height for the header */
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  header h1 {
+    font-size: 2.5rem; /* Increase the font size */
+    margin: 0; /* Remove bottom margin */
+    position: absolute; /* Position absolute to center it */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2; /* Ensure the header text is above the logos */
+    text-shadow: 2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000; /* Add black outline */
+  }
+  
+  #home-button {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+  }
+  
+  #home-button img {
+    width: 100px; /* Adjust the size as needed */
+    height: 100px; /* Adjust the size as needed */
+    cursor: pointer;
+  }
+  
+  #settings-button {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+  }
+  
+  #settings-button img {
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+  }
+  
+  .grow img{
+    transition: 1s ease;
+  }
+    
+  .grow img:hover{
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+    transition: 1s ease;
+  }
+  
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align items to the start to raise the box */
+    height: calc(100vh - 150px); /* Adjust height to account for header */
+    padding-top: 20px; /* Add some padding to raise the box */
+  }
+
+  .game-container {
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 600px; /* Limit the width of the container */
+    width: 100%;
+  }
+  
+  .settings-container {
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .character-image img {
+    width: 100%; /* Ensures the image fits within the container's width */
+    height: auto; /* Maintains the aspect ratio */
+    object-fit: contain; /* Ensures the entire image is displayed without cropping */
+    border-radius: 10px; /* Optional: Adds rounded corners */
+    max-height: 300px; /* Limits the height of the image for consistency */
+    max-width: 300px; /* Limits the width of the image for consistency */
+  }
+  
+  input[type="text"] {
+    padding: 10px;
+    width: 80%;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Space between buttons */
+  }
+  
+  button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+
+  button.skip {
+    background-color: #dc3545; /* Red color for skip button */
+  }
+  
+  button.skip:hover {
+    background-color: #c82333; /* Darker red on hover */
+  }
+
+  #play-again {
+    margin-top: 20px; /* Add some space above the play again button */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }

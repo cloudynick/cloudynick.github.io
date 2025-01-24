@@ -1,1 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guess the NFL Player</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+  <header>
+    <!-- Home Button as Image -->
+    <a href="../../index.html" id="home-button" class="grow">
+      <img src="../../assets/icons/home.png" alt="Home" />
+    </a>
+    <h1>Guess the NFL Player</h1>
+    <div class="logo-conveyor">
+      <div class="logo-track">
+        <!-- NFL team logos will be dynamically added here -->
+      </div>
+    </div>
+    <!-- Settings Button as Image -->
+    <a href="settings.html" id="settings-button" class="grow">
+      <img src="../../assets/icons/settings.png" alt="Settings" />
+    </a>
+  </header>
+  <main>
+    <section id="game-container">
+      <!-- Streak Tracker -->
+      <div id="streak-tracker">
+        <span id="streak-count"></span>
+      </div>
+      <div id="fire-streak" style="display: none;">
+        <div class="fire">
+          <div class="fire-left">
+            <div class="main-fire"></div>
+            <div class="particle-fire"></div>
+          </div>
+          <div class="fire-center">
+            <div class="main-fire"></div>
+            <div class="particle-fire"></div>
+          </div>
+          <div class="fire-right">
+            <div class="main-fire"></div>
+            <div class="particle-fire"></div>
+          </div>
+          <div class="fire-bottom">
+            <div class="main-fire"></div>
+          </div>
+          <div class="streak-text" id="streak-number">10</div>
+        </div>
+      </div>
+      
+      <!-- Game Clues -->
+      <div id="clues">
+        <h2>Clues</h2>
+        <ul id="clues-list" class="no-bullets">
+          <!-- Initial clue will be dynamically added here -->
+        </ul>
+      </div>
+      
+      <!-- Guess Input -->
+      <div id="guess-section">
+        <label for="player-guess">Your Guess:</label>
+        <input type="text" id="player-guess" placeholder="Enter player name" list="player-names">
+        <datalist id="player-names">
+          <!-- Player names will be dynamically added here -->
+        </datalist>
+        <button id="submit-guess">Submit Guess</button>
+        <button id="give-up">Give Up</button>
+      </div>
+      
+      <!-- Feedback Section -->
+      <div id="feedback">
+        <!-- Feedback will be dynamically displayed here -->
+      </div>
+      
+      <!-- Guesses Left Tracker -->
+      <div id="guesses-left">
+        Guesses Left: <span id="guesses-count">5</span>
+      </div>
+      
+      <!-- Play Again Button -->
+      <button id="play-again" style="display: none;">Play Again</button>
 
+      <!-- Test Button to Increase Streak -->
+      <button id="increase-streak">Increase Streak</button>
+    </section>
+  </main>
+</body>
+</html>

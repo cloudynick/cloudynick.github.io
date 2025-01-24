@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guess the NFL Player - Settings</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="scripts.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Guess the NFL Player - Settings</h1>
+  </header>
+  <main>
+    <section id="settings-container">
+      <form id="settings-form">
+        <!-- Difficulty Setting -->
+        <div class="setting">
+          <label for="difficulty">Difficulty:</label>
+          <select id="difficulty" name="difficulty">
+            <option value="rookie" selected>Rookie</option>
+            <option value="easy">Easy</option>
+            <option value="hard">Hard</option>
+            <option value="expert">Expert</option>
+          </select>
+        </div>
+        <!-- Team Setting -->
+        <div class="setting">
+          <label for="team">Team:</label>
+          <select id="team" name="team">
+            <option value="all" selected>All</option>
+            <option value="bills">Buffalo Bills</option>
+            <option value="dolphins">Miami Dolphins</option>
+            <option value="patriots">New England Patriots</option>
+            <option value="jets">New York Jets</option>
+            <option value="chiefs">Kansas City Chiefs</option>
+            <option value="broncos">Denver Broncos</option>
+            <option value="chargers">Los Angeles Chargers</option>
+            <option value="raiders">Las Vegas Raiders</option>
+            <option value="steelers">Pittsburgh Steelers</option>
+            <option value="ravens">Baltimore Ravens</option>
+            <option value="browns">Cleveland Browns</option>
+            <option value="bengals">Cincinnati Bengals</option>
+            <option value="titans">Tennessee Titans</option>
+            <option value="colts">Indianapolis Colts</option>
+            <option value="jaguars">Jacksonville Jaguars</option>
+            <option value="texans">Houston Texans</option>
+            <option value="cowboys">Dallas Cowboys</option>
+            <option value="giants">New York Giants</option>
+            <option value="eagles">Philadelphia Eagles</option>
+            <option value="washington">Washington Commanders</option>
+            <option value="packers">Green Bay Packers</option>
+            <option value="bears">Chicago Bears</option>
+            <option value="lions">Detroit Lions</option>
+            <option value="vikings">Minnesota Vikings</option>
+            <option value="panthers">Carolina Panthers</option>
+            <option value="falcons">Atlanta Falcons</option>
+            <option value="saints">New Orleans Saints</option>
+            <option value="buccaneers">Tampa Bay Buccaneers</option>
+            <option value="seahawks">Seattle Seahawks</option>
+            <option value="rams">Los Angeles Rams</option>
+            <option value="49ers">San Francisco 49ers</option>
+            <option value="cardinals">Arizona Cardinals</option</option>
+            <option value="titans">Tennessee Titans</option>
+          </select>
+        </div>        
+        <!-- Position Setting -->
+        <div class="setting">
+          <label for="position">Position:</label>
+          <select id="position" name="position">
+            <option value="all" selected>All</option>
+            <option value="quarterback">Quarterback</option>
+            <option value="runningback">Runningback</option>
+            <option value="wide receiver">Wide Receiver</option>
+            <option value="offense">Offense</option>
+            <option value="defense">Defense</option>
+          </select>
+        </div>
+        <!-- College Setting -->
+        <div class="setting">
+          <label for="college">College:</label>
+          <select id="college" name="college">
+            <option value="all" selected>All</option>
+            <option value="alabama">Alabama</option>
+            <option value="georgia">Georgia</option>
+            <option value="Ohio St.">Ohio State University</option>
+            <option value="lsu">Louisiana State University</option>
+            <!-- Add more colleges as needed -->
+          </select>
+        </div>
+        <button type="button" onclick="startGame()">Start Game</button>
+      </form>
+    </section>
+  </main>
+  <script>
+    function startGame() {
+      const difficulty = document.getElementById('difficulty').value;
+      const team = document.getElementById('team').value;
+      const position = document.getElementById('position').value;
+      const college = document.getElementById('college').value;
+
+      const urlParams = new URLSearchParams({
+        difficulty: difficulty,
+        team: team,
+        position: position,
+        college: college
+      });
+
+      window.location.href = `index.html?${urlParams.toString()}`;
+    }
+  </script>
+</body>
+</html>
