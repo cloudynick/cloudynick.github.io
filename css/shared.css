@@ -1,0 +1,176 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333333;
+    margin: 0;
+    padding: 0;
+}
+
+h2, h3 {
+    font-weight: bold;
+    color: #292727;
+    margin-bottom: 15px;
+}
+
+a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Layout */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Define the custom font */
+@font-face {
+    font-family: 'Cloudlike';
+    src: url('../assets/fonts/Cloudlike.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+/* Header styles */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #acd6d9;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+header h1 {
+    font-size: 5rem; /* Increase the font size */
+    font-family: 'Cloudlike', sans-serif; /* Use the custom font */
+    margin: 0; /* Remove default margin */
+    color: #ffffff;
+    text-shadow: 
+        2px 2px 0 #000, 
+       -2px -2px 0 #000, 
+        2px -2px 0 #000, 
+       -2px 2px 0 #000; /* Add black outline */
+}
+  
+  header p {
+    font-size: 1.5rem; /* Adjust the font size for the paragraph */
+    font-family: 'Cloudlike', sans-serif; /* Use the custom font */
+    margin: 0; /* Remove default margin */
+  }
+
+/* Navigation */
+.nav {
+    display: flex;
+    justify-content: center;
+    background: #444;
+    padding: 10px 0;
+}
+
+.nav a {
+    color: white;
+    margin: 0 15px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.nav a:hover {
+    background-color: #0066cc;
+}
+
+/* Buttons */
+button {
+    background: #0066cc;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #004999;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Forms */
+form {
+    margin: 20px 0;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+select, input[type="text"], input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #222;
+    color: white;
+    font-size: 0.9rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Keep 3 columns */
+    gap: 20px; /* Space between cards, can adjust if necessary */
+    padding: 20px; /* Padding inside the grid */
+    justify-content: center; /* Centers the grid itself */
+    max-width: 1000px; /* Limit grid width to control the overall spacing */
+    margin: 0 auto; /* Centers the grid horizontally on the page */
+}
+
+.game-card {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+}
+
+.game-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+  
+  .grow img:hover {
+    transform: scale(1.1);
+  }
